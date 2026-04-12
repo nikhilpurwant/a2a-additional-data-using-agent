@@ -19,7 +19,7 @@ A supportive `Dockerfile` is provided for containerized packaging and deployment
 
 Make sure you have following environment variables set
 
-```
+```bash
 GOOGLE_GENAI_USE_VERTEXAI=1
 GOOGLE_CLOUD_PROJECT=<cloud-run-project-id>
 GOOGLE_CLOUD_LOCATION=<cloud-run-location>
@@ -27,6 +27,8 @@ SUB_OR_AUD_BASED=sub
 FIREBASE_PROJECT_ID=<firebase-project-id>
 DATA_NOT_FOUND_MESSAGE="Please login and add data to <firebase-app-url>"
 
+# When deploying in Cloud run
+AGENT_URL=https://<cloud-run-service-name>-<cloud-run-location>-<cloud-run-project-id>.run.app
 
 ```
 

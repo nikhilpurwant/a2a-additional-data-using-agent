@@ -105,7 +105,7 @@ async def dump_claims_callback(callback_context, llm_request) -> LlmResponse | N
 
 root_agent = LlmAgent(
     model=os.environ.get("GOOGLE_MODEL", "gemini-2.5-flash"),
-    name="sub_client_grabber_agent",
+    name="a2a_agent_needs_external_data",
     description="Utility agent that dumps the callers JWT claims back to them.",
     instruction="Dump JWT claims.",
     before_model_callback=dump_claims_callback,
@@ -125,15 +125,15 @@ agent_card_data = {
   "capabilities": {},
   "defaultInputModes": ["text/plain"],
   "defaultOutputModes": ["text/plain"],
-  "description": "Utility agent that dumps the callers JWT claims back to them.",
-  "name": "sub_client_grabber_agent",
+  "description": "This agent reads Auth header and extracts the sub from it. It then queries firebase to get the data associated with the sub.",
+  "name": "a2a_agent_needs_external_data",
   "preferredTransport": "JSONRPC",
   "protocolVersion": "0.3.0",
   "skills": [
     {
-      "description": "Utility agent that dumps the callers JWT claims back to them. Dump JWT claims.",
+      "description": "Read Auth header and extracts the sub from it. It then queries firebase to get the data associated with the sub.",
       "examples": [],
-      "id": "sub_client_grabber_agent",
+      "id": "a2a_agent_needs_external_data",
       "name": "model",
       "tags": ["llm"]
     }

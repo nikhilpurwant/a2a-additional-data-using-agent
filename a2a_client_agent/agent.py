@@ -4,7 +4,7 @@ from google.adk.agents.remote_a2a_agent import RemoteA2aAgent
 from google.adk.a2a.agent.config import A2aRemoteAgentConfig, RequestInterceptor, ParametersConfig
 from a2a.client.middleware import ClientCallContext
 
-# Use the sub that is mapped in mapping.json (or allowed by dummy secret cache)
+# Change this when testing based on what is there in the firebase
 DUMMY_SUB = "106590661213248650031"
 
 def generate_token(sub: str) -> str:
