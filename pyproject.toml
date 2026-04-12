@@ -1,0 +1,10 @@
+[project]
+name = "a2a-additional-data-using-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "firebase-admin>=7.4.0",
+    "google-adk[a2a]>=1.29.0",
+]
