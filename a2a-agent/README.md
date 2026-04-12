@@ -29,3 +29,17 @@ DATA_NOT_FOUND_MESSAGE="Please login and add data to <firebase-app-url>"
 
 
 ```
+
+Also wherever you run this agent, `roles/datastore.viewer` permission must be provided to the service account
+
+
+```bash
+   
+   # Example for the agent runnning as a cloud run service with default compute service account
+   
+   gcloud projects add-iam-policy-binding <your-firebase-project-id> \
+    --member="serviceAccount:OTHER_PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
+    --role="roles/datastore.viewer"
+
+```
+

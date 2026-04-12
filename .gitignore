@@ -13,6 +13,5 @@ wheels/
 
 .env
 
-
 uv.lock
 
